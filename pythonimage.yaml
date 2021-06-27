@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pythonimage
+  labels:
+    app: pythonimage
+spec:
+  containers:
+  - name: k8s-demo
+    image: koushikdp/my-pythonimage
+    ports:
+    - name: nodejs-port
+      containerPort: 3000
