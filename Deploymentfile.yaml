@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
@@ -15,7 +15,6 @@ spec:
     matchLabels:
       app: redis-deployment
   strategy:
-    type: RollngUpdate
     rollingUpdate:
       maxSurge: 100%
       maxUnavailable: 25%
