@@ -15,6 +15,7 @@ spec:
     matchLabels:
       app: redis-deployment
   strategy:
+    type: RollngUpdate
     rollingUpdate:
       maxSurge: 100%
       maxUnavailable: 25%
